@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: audio-1106 
+  description: Secure Supply Chain Example for Audio to Text Application   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:
+    # ArgoCD apps from this template used rhtap-gitops as the grouping
+    argocd/app-selector: rhtap/gitops=audio-1106  
+    janus-idp.io/tekton: audio-1106 
+    backstage.io/kubernetes-id: audio-1106 
+    backstage.io/techdocs-ref: dir:. 
+    quay.io/repository-slug: yangcao/audio-1106
+  tags: ["ai", "whispercpp", "python", "asr"] 
+spec:
+  type: service
+  owner: user:guest 
+  lifecycle: experimental
+ 
